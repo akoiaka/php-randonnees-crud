@@ -6,7 +6,16 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
       <link rel="stylesheet" href="css/basics.css" media="screen" title="no title" charset="utf-8">
   </head>
-  <body>
+<!--  <body>-->
+<!--  <header>-->
+<!--      <div class="ui inverted segment">-->
+<!--      <div class="ui inverted secondary pointing menu">-->
+<!--          <a href="index.php" class="active item">Accueil</a>-->
+<!--          <a href="read.php" class="item">Randonnées</a>-->
+<!--          <a href="create.php" class="item">Modifier</a>-->
+<!--      </div>-->
+<!--  </header>-->
+<!--  </div>-->
     <h1>Liste des randonnées</h1>
     <h3>Bienvenue</h3>
     <h4>Voici la liste de vos randonnées</h4>
@@ -27,15 +36,10 @@ les valeurs de chaque item name difficulte distance etc .. -->
               <p>Difficulté : '.$value->difficulty.'</p>
               <p>Distance : '.$value->distance.'</p>
               <p>Durée de la randonnée : '.$value->duration.'</p>
-              <p>Dénivelé de la randonnée : '.$value->height_difference.'</p><hr></div>';
-        }
-                ?>
-<!--reprise du html pur -->
-            <hr>
-            <form action="blank.php" method="post" class="formulaire">
-            <div class="return"></div>
-            </form>
-            <form action="blank.php">
+              <p>Dénivelé de la randonnée : '.$value->height_difference.'</p><hr></div>
+      
+           
+            <form action="blank.php" method="post" value="Supprimer" >
             <input type="submit" action="blank.php"  class="submit" value="Supprimer">
             </form>
             <form action="modif.php">
@@ -43,9 +47,13 @@ les valeurs de chaque item name difficulte distance etc .. -->
             </form>
             <br>
             <br>
-            <form action="create.php">
+            <form action="index.php">
             <input type="submit" class="submit" value="Retourner Accueil">
-            </form>
+            </form>';
+        }
+                ?>
+<!--reprise du html pur -->
+
             <div class="afficher"></div>';
 
 

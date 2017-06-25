@@ -7,6 +7,22 @@
     <link rel="stylesheet" href="css/basics.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
-<h2>ICI NOUS ALLONS EFFECTUER DES MODIFICATIONS</h2>
+<h2>Modifier une randonnée</h2>
+<?php
+include("connect.php");
+$hiking = $pdo->query('SELECT * FROM hiking');
+$allhikings = $hiking->fetchAll();
+// var_dump($fullpublication);
+foreach ($allhikings as $value) {
+    echo "<div class='createsection'>
+                    <p>Randonnée : ".$value->name."</p>
+                    <p>Difficultée : ".$value->difficulty."</p>
+                    <p>Distance : ".$value->distance."</p>
+                    <p>Durée : ".$value->duration."</p>
+                    <p>Dénivelé : ".$value->height_difference."</p></br>
+                    <a class='ui green button' href='modif2.php?id=".$value->id."'>Modifier</a>
+                  </div>";
+}
+?>
 </body>
 </html>
